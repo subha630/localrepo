@@ -2,16 +2,13 @@
 #include <stdio.h>
 
 int main() {
-  #include <string.h>
+  struct Student {
+    char name[50];
+    int age;
+};
 
-char str1[20] = "Hello";
-char str2[] = "World";
-
-printf("Length: %zu\n", strlen(str1));
-strcpy(str1, "Hi");          // Copy
-strcat(str1, str2);          // Concatenate
-if (strcmp(str1, str2) == 0) // Compare
-    printf("Equal");
+struct Student s1 = {"John", 20};
+printf("%s %d", s1.name, s1.age);
 
     return 0;
 }
